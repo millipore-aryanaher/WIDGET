@@ -36,3 +36,4 @@ C:\Users\X274713\source\repos\WIDGET\WIDGET\bin\Debug\net8.0-windows\runtimes\wi
 C:\Users\X274713\source\repos\WIDGET\WIDGET\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\X274713\source\repos\WIDGET\WIDGET\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\X274713\source\repos\WIDGET\WIDGET\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\X274713\source\repos\WIDGET\WIDGET\obj\Debug\net8.0-windows\WIDGET.sourcelink.json

@@ -18,19 +18,13 @@ namespace WPFWidget
 {
     public partial class PopupWindow : Window
     {
-        private DataTable _fullDataTable;
+        private DataTable? _fullDataTable;
         public PopupWindow()
         {
             InitializeComponent();
             ConfigComboBox.SelectionChanged += ConfigComboBox_SelectionChanged;
         }
 
-        private string GetSelectedRefConfig()
-        {
-            if (ConfigComboBox.SelectedItem is string selected)
-                return selected;
-            return string.Empty;
-        }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {

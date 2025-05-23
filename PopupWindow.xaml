@@ -77,21 +77,56 @@
                 </WrapPanel>
 
                 <!-- DataGrid Area -->
-                <Grid Margin="10,0,10,30">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto"
+              VerticalScrollBarVisibility="Auto">
                     <DataGrid x:Name="DataTableGrid"
-                              AutoGenerateColumns="True"
-                              CanUserAddRows="False"
-                              IsReadOnly="True"
-                              FontSize="13"
-                              Background="White"
-                              HeadersVisibility="All"
-                              GridLinesVisibility="All"
-                              BorderBrush="#A9CFF4"
-                              BorderThickness="1"
-                              Margin="0"
-                              RowHeaderWidth="0"
-                              AlternatingRowBackground="#F7FAFD" />
-                </Grid>
+              AutoGenerateColumns="False"
+              CanUserAddRows="False"
+              IsReadOnly="True"
+              FontSize="13"
+              Background="White"
+              HeadersVisibility="All"
+              GridLinesVisibility="All"
+              BorderBrush="#A9CFF4"
+              BorderThickness="1"
+              Margin="0"
+              RowHeaderWidth="0"
+              AlternatingRowBackground="#F7FAFD">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ITEM NO." Binding="{Binding ITEM_NO}" Width="80"/>
+                            <DataGridTextColumn Header="PART NUMBER" Binding="{Binding [PART NUMBER]}" Width="150"/>
+                            <DataGridTextColumn Header="DESCRIPTION" Binding="{Binding DESCRIPTION}" Width="300">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                                        <Setter Property="VerticalAlignment" Value="Top"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="COMMENTS" Binding="{Binding COMMENTS}" Width="400">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                        <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                                        <Setter Property="VerticalAlignment" Value="Top"/>
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+
+                        </DataGrid.Columns>
+
+                        <!-- Auto row height for wrapped content -->
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="VerticalAlignment" Value="Top"/>
+                                <Setter Property="Height" Value="Auto"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                </ScrollViewer>
+
             </DockPanel>
 
             <!-- Resizable Thumbs (invisible but functional) -->
